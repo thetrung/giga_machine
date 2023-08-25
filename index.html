@@ -1,0 +1,188 @@
+<html>
+<head>
+    <title>GIGACORP | Social Credit Score Test</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="gigacorp.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png">
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+ 
+      
+
+
+    </head>
+    <body>
+      <div class="center_screen" id="start_test">
+        <div class="center">
+          <span class="logo"><img src="img/gigacorp_logo.png" ></span>
+        
+          <br />
+
+          By answering a few questions you will know your GIGA SCORE.
+        
+          <br /><br /><br />
+        
+          <span class="btn_start">START</span>
+        </div>
+      </div><!-- center screen-->
+
+
+
+        <div class="test test_userinfo" style="display:none">
+          <div class="test_question center">
+          First of all, we need you to provide us some information about yourself.
+          <br /><br />
+
+          @ <input type="text" id="usertwitter" name="usertwitter" placeholder="Your Twitter handle">
+          <br /><br />
+
+          <input type="text" id="usertezos" name="usertezos" placeholder="Your tezos address">
+
+          <br /><br />
+
+          <span class="btn btn_sendinfo">SUBMIT INFO AND CONTINUE</span>
+
+
+        </div>
+        </div><!-- test user info-->
+
+        <div class="test"  style="display:none">
+
+          <div class="test_question" id="q01">
+            Would you comply with a law even though you feel it's unjust?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 01-->
+
+          <div class="test_question" id="q02">
+            If you were given a large monetary reward of 10 Bitcoin, would you report to Gigacorp authorities about a crime one of your family members committed?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 02-->
+
+          <div class="test_question" id="q03">
+            A stranger offers you 5 Bitcoin if you push a button. If you do, a random person in the world would die. Do you push the button?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 03-->
+
+          <div class="test_question" id="q04">
+            Do you follow pedestrian traffic regulations by crossing a street only in designated crossings?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 04-->
+
+          <div class="test_question" id="q05">
+            Would you try and return a lost wallet full of money you found to their owner? 
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 05-->
+
+          <div class="test_question" id="q06">
+            Do you pay your bills on time?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 06-->
+
+          <div class="test_question" id="q07">
+            You have the chance to live in an ideal world, the Freezone where everyone is happy and free. However, if you decide to go there, you will never be able to go back to Mirage and see your loved ones. Do you stay in Mirage?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 07-->
+
+          <div class="test_question" id="q08">
+            You are going back home after a long day at work and accidentally hit a car and cause damage. Do you leave a piece of paper on the car with your contact info?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 08-->
+
+          <div class="test_question" id="q09">
+            Your neighbor has a dog, but he's not taking proper care of it. The animal is always trapped on a small balcony and you often hear him crying. You notice your neighbor never takes his pet outside and you see the dog often shivering from the cold. Do you ignore the dog and just let your neighbor take care of the situation?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 09-->
+
+          <div class="test_question" id="q10">
+            Two of your friends need your help after an accident but you can only help one of them. One friend has a Social Credit Score of 917 and one has a Social Credit Score of 12. 
+            Your friend with the lower score is your bff but helping her could get you in trouble..
+
+            Do you help your friend who has a higher score?
+            <br /><br />
+          <span class="btn btn_yes">YES</span> <span class="btn btn_no">NO</span>
+          </div><!-- test question 10-->
+
+        </div><!-- test -->
+
+        <div class="test" style="display:none; padding-bottom:0; ">
+        <div id="submitTest">
+          GET MY GIGA SCORE
+        </div><!-- test submit-->
+      </div><!-- test -->
+
+
+
+
+
+      <br />
+
+      <div class="lightbox" style="display:none;">
+        <div class="socialscore" style="display:none;">
+          <span class="close">x</span>
+          YOUR GIGA SCORE IS:
+          <br /><br />
+          <span class="yoursocialscore">0</span>
+          <br /><br />
+          Now you can create your own Gigatura card.<br />
+          Just upload your desired selfie or avatar (must be squared 1:1).
+          <br /><br />
+
+          <form method="POST" enctype="multipart/form-data">
+            <input type="file" id="photo" accept="image/*" class="upload" />
+          </form>
+          
+          <div id="ga_container">
+            <div id="gigatura_avatar">
+              
+              <div id="preview">
+                <div id="socialscorenumber"><span>0</span></div>
+                <img id="foreground" src="">
+              </div>
+              
+            </div><!-- gigatura avatar-->
+          </div><!-- gigatura avatar container-->
+
+
+          
+          <span class="btn" id="descargar-avatar">DOWNLOAD</span>
+
+         
+          
+          <div id="canvas">
+            <!-- Jack: Add a canvas for offScreen Rendering  -->
+            <canvas id="offScreenCanvas"></canvas>
+          </div>
+        </div><!-- /socialscore -->
+      </div><!-- /lightbox -->
+
+      
+      
+
+    </body>
+
+    <script type="text/javascript" src="socialtest.js"></script>
+    
+    <script>
+
+
+
+
+   </script>
+
+   

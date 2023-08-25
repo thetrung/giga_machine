@@ -1,0 +1,218 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@300;600&family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: 'Kremlin';
+    src: url('fonts/kremlin.eot');
+    src: url('fonts/kremlin.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kremlin.woff2') format('woff2'),
+         url('fonts/kremlin.woff') format('woff'),
+         url('fonts/kremlin.ttf')  format('truetype'),
+         url('fonts/kremlin.svg#Kremlin') format('svg');
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    overflow: visible;
+}
+
+.container{
+    width:70%;
+    margin:0 auto;
+}
+.center{
+    text-align: center;
+}
+.center_screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.logo img{
+    max-width: 70%;
+    margin:auto;
+}
+.test_started{
+    display:block;
+    min-height:0;
+}
+.btn_start{
+    display:inline-block;
+    padding:30px 50px;
+    font-weight: 600;
+    background:#272727;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+    transition: all .5s;
+    box-shadow:-5px 5px 1px 1px rgba(0, 0, 0, 0.2);
+
+}
+.btn_start:hover{
+    background:#000000;
+}
+
+.test{
+    border:#272727 1px solid;
+    margin:30px auto 0 auto;
+    border-radius:5px;
+    padding-bottom:5px;
+    overflow:hidden;
+    width:70%;
+}
+.test_question{
+    color:#212121;
+    padding:30px;
+    background:#dfdfdf;
+    margin:5px 5px 0 5px;
+}
+
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#343434;
+    border:#343434 5px solid;
+    color:#fff;
+    cursor:pointer;
+    transition: all .5s;
+}
+.btn:hover{
+    background:#000;
+}
+.upload{
+    display:inline-block;
+    padding:5px 10px;
+    border:#343434 1px solid;
+    border-radius:3px;
+    color:#fff;
+    cursor:pointer;
+    max-width:90%;
+    overflow: hidden;
+}
+
+#submitTest{
+    padding:20px;
+    text-align: center;
+    background:#000;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+}
+
+.lightbox{
+    background:rgba(255, 255, 255, .85);
+    position:fixed; 
+    top:0; right:0; bottom:0; left:0;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: scroll;
+}
+.socialscore{
+
+    min-width: 560px;
+    background:#212121;
+    color:#fff;
+    margin:auto;
+    text-align: center;
+    padding:30px;
+    transform-origin: top left;
+}
+.yoursocialscore{
+    font-size: 70px;
+}
+.close{
+    position:absolute;
+    top:2px;
+    right:2px;
+    background:#fff;
+    color:#000;
+    border-radius:50% 0px 50% 50%;
+    height:30px;
+    width:30px;
+    text-align: center;
+    line-height: 30px;
+    cursor:pointer;
+    font-weight: 600;
+    transition:all .5s;
+}
+.close:hover{
+    background:#ccc;
+}
+.selectedAnswer{
+    border:#0099ff 5px solid;
+}
+
+#ga_container{
+    margin:0 auto 20px auto;
+    width:500px;
+    height:500px;
+}
+#gigatura_avatar{
+    width:500px;
+    height:500px;
+    margin:auto;
+    background:#ccc;
+    position:relative;
+    overflow: hidden;
+    transform-origin: top left;
+}
+#preview{
+    height: 100%;
+}
+#image_avatar{
+    max-width:100%;
+    position:absolute;
+    z-index: 100;
+    top:0; right:0; bottom:0; left:0;
+    margin:auto;
+}
+#foreground{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 200;
+    top:0; right:0; bottom:0; left:0;
+    margin:auto;
+}
+#socialscorenumber{
+    position: absolute;
+    z-index: 300;
+    height: 12.75%;
+    width: 14.75%;
+    left: 0px;
+    bottom: 0;
+    font-family: 'Kremlin';
+    border-radius: 50%;   
+    padding:2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#socialscorenumber span{
+    width:78%;
+    height:40%;
+    overflow: hidden;
+    font-size:24px;
+
+}
+#canvas{opacity: 0; position:absolute; pointer-events: 
+none;}
+
+@media (max-width: 800px) {
+    .test{
+        width:90%
+    }
+  }
+
