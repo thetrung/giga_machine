@@ -284,17 +284,31 @@ $(document).ready(function(){
     // get images to compile :
     const ImgUserProfile = document.getElementById(`image_avatar`)
     const ImgForeground = document.getElementById(`foreground`)
-    // drawing over :
-    canvasCtx.drawImage(ImgUserProfile, 0, 0, canvas.width, canvas.height)
+    // compute center-square to crop :
+    let dX = ImgUserProfile.naturalWidth
+    let dY = ImgUserProfile.naturalHeight
+    let ratio = dX/dY
+    const sX = ratio > 1 ? 1 * (dX - dY)/2 : 0
+    const sY = ratio < 1 ? 1 * (dY - dX)/2 : 0
+    const sW = ratio > 1 ? dX - sX*2 : dX
+    const sH = ratio < 1 ? dY - sY*2 : dY
+    // drawing cropped user profile :
+    canvasCtx.drawImage(ImgUserProfile, 
+        sX, sY, sW, sH, 
+        0, 0, canvas.width, canvas.height)
+    // draw foreground over :
     canvasCtx.drawImage(ImgForeground, 0, 0,  canvas.width, canvas.height)
+    
     // show canvas :
-    // const HTMLcanvas = document.getElementById(`canvas`)
-    // HTMLcanvas.style.opacity = 1
-    // HTMLcanvas.style.position = `static`
+    const HTMLcanvas = document.getElementById(`canvas`)
+    HTMLcanvas.style.opacity = 1
+    HTMLcanvas.style.position = `static`
+    
     // assign to link DOWNLOAD :
     const link = document.createElement('a')
     link.href = canvas.toDataURL()
     link.download = 'gigacorp_profile.png'
+    
     // trigger :
     link.click()
 
