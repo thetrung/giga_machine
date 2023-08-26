@@ -298,7 +298,14 @@ $(document).ready(function(){
         0, 0, canvas.width, canvas.height)
     // draw foreground over :
     canvasCtx.drawImage(ImgForeground, 0, 0,  canvas.width, canvas.height)
-    
+    // setup font to draw :
+    canvasCtx.font = "24px Kremlin"
+    canvasCtx.fillStyle = "#fff"
+    // align number :
+    const alignFontX = 24 + (socialscore === 0 ? 15 : (socialscore < 100 ? 7 : (socialscore < 200 ? 3 : -2 )))
+    const alignFontY = canvas.height - 34
+    // draw social score :
+    canvasCtx.fillText(socialscore, alignFontX, alignFontY)
     // show canvas :
     const HTMLcanvas = document.getElementById(`canvas`)
     HTMLcanvas.style.opacity = 1
